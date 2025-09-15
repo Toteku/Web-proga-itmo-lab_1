@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
 </head>
 <body>
     <div class="container">
-        <div class="ramka">
-            <div class="elements">
-                <img src="https://w0.peakpx.com/wallpaper/374/151/HD-wallpaper-nyan-cat-cat-funny-kitten-kitty-lol-meow-neon-nyan-omg-rainbow-tart.jpg" alt="nyan cat">
-                <p>Nyan cat</p> #описание 
-                <div class="scaling_bar">
-                    <button>-</button>
-                    <span id="t">0</span>
-                    <button>+</button>
-                </div>
+        <header>
 
+        </header>
+        <div class="main_body">
+            <div class="ramka">
+                <div class="elements">
+                    <img src="https://w0.peakpx.com/wallpaper/374/151/HD-wallpaper-nyan-cat-cat-funny-kitten-kitty-lol-meow-neon-nyan-omg-rainbow-tart.jpg" alt="nyan cat">
+                    <p>Nyan cat</p>  
+                    <div class="scaling_bar">
+                        <button onclick="cartManager.changeItemCount(0,-1)">-</button>
+                        <span id="0"></span>
+                        <button onclick="cartManager.changeItemCount(0,1)">+</button>
+                    </div>
+    
+                </div>
             </div>
+
         </div>
+        <footer>
+
+        </footer>
 
     </div>
-    
+
+    <script src="./localstorage.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            cartManager.initCart()
+        })
+    </script>
 </body>
 </html>
