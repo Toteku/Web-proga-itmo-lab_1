@@ -88,16 +88,19 @@ let orders = [];
 
 // Функции для работы с модальным окном
 function openCartModal() {
+    updateTotal();
     const modal = document.getElementById('cart-modal');
     const modalBody = document.getElementById('modal-body');
     
     if (isCartEmpty()) {
         modalBody.innerHTML = `
             <h2>Корзина пуста</h2>
-            <p>Выберите товары на главной странице</p>
+            <h3>Выберите товары на главной странице</h3>
         `;
     } else {
         modalBody.innerHTML = `
+        <div class="forma"> 
+        
             <h2>Оформление заказа</h2>
             <form onsubmit="submitOrder(event)">
                 <div class="form-group">
@@ -117,10 +120,11 @@ function openCartModal() {
                     <input type="tel" name="phone" required pattern="[+]{0,1}[0-9\s\-\(\)]{10,}">
                 </div>
                 <div class="form-group">
-                    <p><strong>Общая сумма: ${cart.total} руб.</strong></p>
+                    <p><strong>Общая сумма: ${cart.total}₿.</strong></p>
                 </div>
                 <button type="submit">Оформить заказ</button>
             </form>
+        </div>
         `;
     }
     
