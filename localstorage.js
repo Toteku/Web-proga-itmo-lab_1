@@ -11,7 +11,7 @@ function loadCartFromStorage() {
     return saved ? JSON.parse(saved) : null;
 }
 
-// очистка корзины (пока не реализовано)
+// очистка корзины 
 function clearCartStorage() {
     localStorage.removeItem('cart');
 }
