@@ -10,6 +10,10 @@
     <div class="container">
         <header>
                 <h2>MeMCoInShOp</h2>
+                <img src="" alt="">
+                <div id="cart-header" onclick="openCartModal()">
+                    <span id="cart-text">Корзина пуста</span>
+                </div>
         </header>
         <div class="main_body">
             <div class="block_1">
@@ -89,5 +93,13 @@
             cartManager.initCart()
         })
     </script>
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCartModal()">&times;</span>
+        <div id="modal-body">
+            
+        </div>
+    </div>
+</div>
 </body>
 </html>
